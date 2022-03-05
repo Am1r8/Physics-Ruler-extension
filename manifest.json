@@ -1,0 +1,22 @@
+{
+    "name": "Physics Ruler",
+    "description": "Position the ruler and measure the objects!",
+    "version": "1.5",
+    "manifest_version": 3,
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_icon": "icon.png",
+        "default_title": "Ruler",
+        "name": "Physics Ruler"
+    },
+    "content_scripts": [{
+        "js": ["jquery.js"],
+        "matches": ["*://*/*"]
+    }]
+}
